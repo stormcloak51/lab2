@@ -1,10 +1,16 @@
 # запрос данных
-string = input("Введите текст: ")
+a, b, c = (
+    float(input("Введите первое число: ")),
+    float(input("Введите второе число: ")),
+    float(input("Введите третье число: ")),
+)
 
-# выполнение операций со строкой
-print(f"Длина: {len(string)}")
-print(f"верхний регистр: {string.upper()}")
-print(f"нижний регистр: {string.lower()}")
-print(f"первый символ: {string[0]}")
-print(f"последний символ: {string[-1]}")
-print(f"количество пробелов: {string.count(' ')}")
+# подсчет среднего, минимального, максимального
+avg = (a + b + c) / 3
+mini = min(a, b, c)
+maxi = max(a, b, c)
+
+# вывод получившихся значений
+print(f"среднее арифметическое: {avg:.2f}")
+print(f"minimum: {mini}")
+print(f"maximum: {maxi}")
