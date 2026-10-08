@@ -1,17 +1,17 @@
-# импортируем либу для работы со строками
-import string
+# импорт либы datetime для работы с датами
+from datetime import date
 
 # ввод данных
-text = input("Строка: ")
+day = int(input("День: "))
+month = int(input("Месяц: "))
+year = int(input("Год: "))
 
-# подсчет всех сущностей строки
-letters = sum(c.isalpha() for c in text)
-digits = sum(c.isdigit() for c in text)
-spaces = sum(c.isspace() for c in text)
-punct = sum(c in string.punctuation for c in text)
+# today - это объект хранящий в себе текущий месяц день год и так далее
+today = date.today()
+# сперва мы вычтем из текущего года год который ввел пользователь
+# а далее сравниваем сперва месяц и день, и если они оба меньше, то у нас еще вычтется один год
+age = today.year - year - ((today.month, today.day) < (month, day))
 
-# вывод соответственно всех сущностей
-print("Буквы:", letters)
-print("Цифры:", digits)
-print("Пробелы:", spaces)
-print("Знаки препинания:", punct)
+# выводим получившийся возраст
+print("Возраст:", age)
+
