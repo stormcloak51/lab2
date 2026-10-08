@@ -1,9 +1,7 @@
 # запрос данных
-weight = float(input("Вес (кг): "))
-height = float(input("Рост (м): "))
+number = int(input("Число: "))
 
-# подсчет имт
-imt = weight / (height**2)
-# вывод имт
-print(f"ИМТ: {imt:.1f}")
-
+# вывод всех систем счисления
+print("двоичное:", bin(number)[2:])
+print("восьмеричное:", oct(number)[2:])
+print("шестанадцатеричное:", hex(number)[2:])
