@@ -1,17 +1,13 @@
-# импорт либы datetime для работы с датами
-from datetime import date
+n = int(input("Введите число: "))
 
-# ввод данных
-day = int(input("День: "))
-month = int(input("Месяц: "))
-year = int(input("Год: "))
+print(bin(n)[2:])
 
-# today - это объект хранящий в себе текущий месяц день год и так далее
-today = date.today()
-# сперва мы вычтем из текущего года год который ввел пользователь
-# а далее сравниваем сперва месяц и день, и если они оба меньше, то у нас еще вычтется один год
-age = today.year - year - ((today.month, today.day) < (month, day))
+if n == 0:
+    result = "0"
+else:
+    result = ""
+    while n > 0:
+        result = str(n % 2) + result
+        n //= 2
 
-# выводим получившийся возраст
-print("Возраст:", age)
-
+print(result)
